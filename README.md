@@ -1,16 +1,23 @@
+
 ## Hi there 👋
 
-<!--
-**Pabl0125/Pabl0125** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+- 🌱 I’m currently learning Spring Boot as a web framework for Java
+- 🧑🏻‍🎓 Computer Science student at USC Univesity
+- 📫 How to reach me: pabloarro2005@gmail.com
 
-Here are some ideas to get you started:
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## ⚒️ Skills and Tools : 
+
+
+<p align="center">
+<img src = https://skillicons.dev/icons?i=java,gradle,spring,idea,eclipse,vscode,git,github,c,linux,ubuntu,bash,html,css,postgres,=light/>
+</p>
+
+## 📊 Statistics
+
+<div align=center>
+  <img height=192 src="https://github-readme-stats.vercel.app/api?username=Pabl0125&theme=dark&count_private=true&border_radius=10&show_icons=true&locale=en" alt="Pabl0125 GitHub Stats" />
+  <img height=192 src="https://github-readme-stats.vercel.app/api/top-langs?username=Pabl0125&theme=dark&layout=compact&hide=css&langs_count=8&border_radius=10&show_icons=true&locale=en" alt="Pabl0125 Most Used Languages" />
+</div>
+
+<hr>
