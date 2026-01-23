@@ -12,7 +12,7 @@
 <br>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=java,gradle,spring,idea,eclipse,vscode,git,github,c,linux,ubuntu,bash,html,css,postgres&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=java,gradle,spring,idea,eclipse,vscode,git,github,c,linux,ubuntu,bash,html,css,postgres&perline=8&theme=dark" />
 </p>
 
 <hr>
