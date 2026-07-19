@@ -109,7 +109,7 @@ def update_readme(new_content):
         
     # Busca las anclas y reemplaza lo que hay en medio
     pattern = r"(<!-- START_STATS -->\n).*?(\n<!-- END_STATS -->)"
-    updated_readme = re.sub(pattern, rf"\1{new_content}\2", readme, flags=re.DOTALL)
+    updated_readme = re.sub(pattern, rf"\1```text\n{new_content}\n```\2", readme, flags=re.DOTALL)
     
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(updated_readme)
