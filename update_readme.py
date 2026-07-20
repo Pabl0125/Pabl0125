@@ -31,23 +31,25 @@ INFO = {
 }
 # ==========================================
 
-def get_ascii_art(username, width=35):
-    """Descarga la foto de perfil y genera un ASCII art."""
-    try:
-        response = requests.get(f"https://github.com/{username}.png")
-        img = Image.open(BytesIO(response.content)).convert('L')
-        aspect_ratio = img.height / img.width
-        # Las letras de consola son más altas que anchas
-        new_height = int(width * aspect_ratio * 0.45)
-        img = img.resize((width, new_height))
-        pixels = img.getdata()
-        chars = ["@", "%", "#", "*", "+", "=", "-", ":", ".", " "]
-        new_pixels = [chars[min(9, pixel // 26)] for pixel in pixels]
-        ascii_image = ["".join(new_pixels[index:index + width]) for index in range(0, len(new_pixels), width)]
-        return ascii_image
-    except Exception as e:
-        print("No se pudo generar ASCII art:", e)
-        return []
+def get_ascii_art(username=None):
+    """Devuelve un ASCII art estático de Tux (Pingüino de Linux)."""
+    tux = '''         _nnnn_
+        dGGGGMMb
+       @p~qp~~qMb
+       M|@||@) M|
+       @,----.JM|
+      JS^\\__/  qKL
+     dZP        qKRb
+    dZP          qKKb
+   fZP            SMMb
+   HZM            MMMM
+   FqM            MMMM
+ __| ".        |\\dS"qML
+ |    `.       | `' \\Zq
+_)      \\.___.,|     .'
+\\____   )MMMMMP|   .'
+     `-'       `--' '''
+    return tux.split('\\n')
 
 def get_uptime(birthday):
     """Calcula el tiempo transcurrido desde la fecha de nacimiento."""
