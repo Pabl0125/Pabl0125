@@ -3,6 +3,8 @@ import requests
 import re
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
+from io import BytesIO
+from PIL import Image
 
 # ==========================================
 # ⚙️ CONFIGURACIÓN PERSONAL
@@ -28,6 +30,24 @@ INFO = {
     "Discord": "tu_usuario_discord"
 }
 # ==========================================
+
+def get_ascii_art(username, width=35):
+    """Descarga la foto de perfil y genera un ASCII art."""
+    try:
+        response = requests.get(f"https://github.com/{username}.png")
+        img = Image.open(BytesIO(response.content)).convert('L')
+        aspect_ratio = img.height / img.width
+        # Las letras de consola son más altas que anchas
+        new_height = int(width * aspect_ratio * 0.45)
+        img = img.resize((width, new_height))
+        pixels = img.getdata()
+        chars = ["@", "%", "#", "*", "+", "=", "-", ":", ".", " "]
+        new_pixels = [chars[min(9, pixel // 26)] for pixel in pixels]
+        ascii_image = ["".join(new_pixels[index:index + width]) for index in range(0, len(new_pixels), width)]
+        return ascii_image
+    except Exception as e:
+        print("No se pudo generar ASCII art:", e)
+        return []
 
 def get_uptime(birthday):
     """Calcula el tiempo transcurrido desde la fecha de nacimiento."""
@@ -104,8 +124,13 @@ def generate_svg():
     line_height = 20
     padding = 20
     header_offset = 30
-    height = len(lines) * line_height + padding * 2 + header_offset
-    width = 750
+    
+    ascii_lines = get_ascii_art(USER_NAME)
+    
+    # Asegurar altura suficiente para el texto y el ascii
+    total_lines = max(len(lines), len(ascii_lines))
+    height = total_lines * line_height + padding * 2 + header_offset
+    width = 900
     
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
     <rect width="{width}" height="{height}" rx="10" ry="10" fill="#1e1e1e" />
@@ -114,10 +139,17 @@ def generate_svg():
     <circle cx="60" cy="20" r="6" fill="#27c93f" />
     <text font-family="monospace" font-size="14" fill="#a9b1d6" xml:space="preserve">
 '''
+    # Dibujar la parte del texto (izquierda)
     for i, line in enumerate(lines):
         y = padding + header_offset + (i * line_height)
         line = line.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
         svg += f'        <tspan x="20" y="{y}">{line}</tspan>\n'
+        
+    # Dibujar la parte del ASCII art (derecha)
+    for i, line in enumerate(ascii_lines):
+        y = padding + header_offset + (i * line_height)
+        line = line.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+        svg += f'        <tspan x="580" y="{y}" fill="#bb9af7">{line}</tspan>\n'
         
     svg += '''    </text>
 </svg>'''
