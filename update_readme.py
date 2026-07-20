@@ -31,26 +31,6 @@ INFO = {
 }
 # ==========================================
 
-def get_ascii_art(username=None):
-    """Devuelve un ASCII art estático de Tux (Pingüino de Linux)."""
-    tux = '''         _nnnn_
-        dGGGGMMb
-       @p~qp~~qMb
-       M|@||@) M|
-       @,----.JM|
-      JS^\\__/  qKL
-     dZP        qKRb
-    dZP          qKKb
-   fZP            SMMb
-   HZM            MMMM
-   FqM            MMMM
- __| ".        |\\dS"qML
- |    `.       | `' \\Zq
-_)      \\.___.,|     .'
-\\____   )MMMMMP|   .'
-     `-'       `--' '''
-    return tux.split('\\n')
-
 def get_uptime(birthday):
     """Calcula el tiempo transcurrido desde la fecha de nacimiento."""
     diff = relativedelta(datetime.today(), birthday)
@@ -127,11 +107,8 @@ def generate_svg():
     padding = 20
     header_offset = 30
     
-    ascii_lines = get_ascii_art(USER_NAME)
-    
-    # Asegurar altura suficiente para el texto y el ascii
-    total_lines = max(len(lines), len(ascii_lines))
-    height = total_lines * line_height + padding * 2 + header_offset
+    # Calcular altura basada en las líneas de texto, con mínimo para la imagen
+    height = max(len(lines) * line_height + padding * 2 + header_offset, 350)
     width = 900
     
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
@@ -139,6 +116,10 @@ def generate_svg():
     <circle cx="20" cy="20" r="6" fill="#ff5f56" />
     <circle cx="40" cy="20" r="6" fill="#ffbd2e" />
     <circle cx="60" cy="20" r="6" fill="#27c93f" />
+    
+    <!-- Imagen a la derecha -->
+    <image href="penguin_ascii.png" x="550" y="50" width="300" height="300" />
+    
     <text font-family="monospace" font-size="14" fill="#a9b1d6" xml:space="preserve">
 '''
     # Dibujar la parte del texto (izquierda)
@@ -146,12 +127,6 @@ def generate_svg():
         y = padding + header_offset + (i * line_height)
         line = line.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
         svg += f'        <tspan x="20" y="{y}">{line}</tspan>\n'
-        
-    # Dibujar la parte del ASCII art (derecha)
-    for i, line in enumerate(ascii_lines):
-        y = padding + header_offset + (i * line_height)
-        line = line.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
-        svg += f'        <tspan x="580" y="{y}" fill="#bb9af7">{line}</tspan>\n'
         
     svg += '''    </text>
 </svg>'''
