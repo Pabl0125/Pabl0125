@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="530" viewBox="0 0 750 530">
+    <rect width="750" height="530" rx="10" ry="10" fill="#1e1e1e" />
+    <circle cx="20" cy="20" r="6" fill="#ff5f56" />
+    <circle cx="40" cy="20" r="6" fill="#ffbd2e" />
+    <circle cx="60" cy="20" r="6" fill="#27c93f" />
+    <text font-family="monospace" font-size="14" fill="#a9b1d6" xml:space="preserve">
+        <tspan x="20" y="50">Pabl0125@github -------------------------------------------</tspan>
+        <tspan x="20" y="70">. OS: ............................ Windows 11, Android, Linux</tspan>
+        <tspan x="20" y="90">. Uptime: ........................ 28 years, 2 months, 5 days</tspan>
+        <tspan x="20" y="110">. Host: .............................. Tu Empresa / Freelance</tspan>
+        <tspan x="20" y="130">. Role: ............................ Desarrollador Full-Stack</tspan>
+        <tspan x="20" y="150">. IDE: ...................................... VS Code, Neovim</tspan>
+        <tspan x="20" y="170">.</tspan>
+        <tspan x="20" y="190">. Languages.Programming: ...... Python, JavaScript, Java, C++</tspan>
+        <tspan x="20" y="210">. Languages.Computer: .................. HTML, CSS, JSON, SQL</tspan>
+        <tspan x="20" y="230">. Languages.Real: ........................... Español, Inglés</tspan>
+        <tspan x="20" y="250">.</tspan>
+        <tspan x="20" y="270">. Hobbies.Software: ............... Open Source, Linux Ricing</tspan>
+        <tspan x="20" y="290">. Hobbies.Hardware: ............... Teclados Custom, PC Build</tspan>
+        <tspan x="20" y="310">.</tspan>
+        <tspan x="20" y="330">- Contact ---------------------------------------------------</tspan>
+        <tspan x="20" y="350">. Email.Personal: ....................... tu_correo@gmail.com</tspan>
+        <tspan x="20" y="370">. Email.Work: ......................... tu_correo@trabajo.com</tspan>
+        <tspan x="20" y="390">. LinkedIn: ...................... linkedin.com/in/tu_usuario</tspan>
+        <tspan x="20" y="410">. Discord: ............................... tu_usuario_discord</tspan>
+        <tspan x="20" y="430">.</tspan>
+        <tspan x="20" y="450">- GitHub Stats ----------------------------------------------</tspan>
+        <tspan x="20" y="470">. Repos: .... 7  | Stars: ............................. 0   </tspan>
+        <tspan x="20" y="490">. Followers: ........................................ 11  </tspan>
+    </text>
+</svg>
