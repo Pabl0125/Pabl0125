@@ -70,8 +70,8 @@ def format_line(label, value, total_width=61):
     dots = "." * max(1, dots_count)
     return f"{left_part}{dots} {value_str}"
 
-def generate_layout():
-    """Genera el bloque de texto completo."""
+def generate_svg():
+    """Genera el contenido de una imagen SVG tipo terminal."""
     repos, stars, followers = get_github_stats()
     uptime = get_uptime(BIRTHDAY)
     
@@ -100,21 +100,35 @@ def generate_layout():
         f". Repos: .... {repos:<2} | Stars: ............................. {stars:<4}",
         f". Followers: ........................................ {followers:<4}"
     ]
-    return "\n".join(lines)
-
-def update_readme(new_content):
-    """Inyecta el nuevo contenido en el README.md entre las etiquetas HTML."""
-    with open("README.md", "r", encoding="utf-8") as f:
-        readme = f.read()
-        
-    # Busca las anclas y reemplaza lo que hay en medio
-    pattern = r"(<!-- START_STATS -->\n).*?(\n<!-- END_STATS -->)"
-    updated_readme = re.sub(pattern, rf"\1```text\n{new_content}\n```\2", readme, flags=re.DOTALL)
     
-    with open("README.md", "w", encoding="utf-8") as f:
-        f.write(updated_readme)
-    print("¡README.md actualizado con éxito!")
+    line_height = 20
+    padding = 20
+    header_offset = 30
+    height = len(lines) * line_height + padding * 2 + header_offset
+    width = 750
+    
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
+    <rect width="{width}" height="{height}" rx="10" ry="10" fill="#1e1e1e" />
+    <circle cx="20" cy="20" r="6" fill="#ff5f56" />
+    <circle cx="40" cy="20" r="6" fill="#ffbd2e" />
+    <circle cx="60" cy="20" r="6" fill="#27c93f" />
+    <text font-family="monospace" font-size="14" fill="#a9b1d6" xml:space="preserve">
+'''
+    for i, line in enumerate(lines):
+        y = padding + header_offset + (i * line_height)
+        line = line.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+        svg += f'        <tspan x="20" y="{y}">{line}</tspan>\n'
+        
+    svg += '''    </text>
+</svg>'''
+    return svg
+
+def update_files(svg_content):
+    """Guarda el archivo SVG."""
+    with open("terminal.svg", "w", encoding="utf-8") as f:
+        f.write(svg_content)
+    print("¡terminal.svg generado con éxito!")
 
 if __name__ == "__main__":
-    layout_text = generate_layout()
-    update_readme(layout_text)
+    svg_data = generate_svg()
+    update_files(svg_data)
