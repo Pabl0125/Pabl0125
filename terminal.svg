@@ -4,7 +4,7 @@
     <circle cx="40" cy="20" r="6" fill="#ffbd2e" />
     <circle cx="60" cy="20" r="6" fill="#27c93f" />
     
-    <text font-family="monospace" font-size="14" fill="#a9b1d6" xml:space="preserve">
+    <text font-family="monospace" font-size="14" fill="#ffffff" xml:space="preserve">
         <tspan x="20" y="50">Pabl0125@github -------------------------------------------</tspan>
         <tspan x="20" y="70">. OS: ............................ Windows 11, Android, Linux</tspan>
         <tspan x="20" y="90">. Uptime: ........................ 28 years, 2 months, 5 days</tspan>
@@ -28,31 +28,31 @@
         <tspan x="20" y="450">- GitHub Stats ----------------------------------------------</tspan>
         <tspan x="20" y="470">. Repos: .... 7  | Stars: ............................. 0   </tspan>
         <tspan x="20" y="490">. Followers: ........................................ 11  </tspan>
-        <tspan x="550" y="50" fill="#bb9af7">██████████████████████████████████████████████████████</tspan>
-        <tspan x="550" y="70" fill="#bb9af7">██████████████████████████████████████████████████████</tspan>
-        <tspan x="550" y="90" fill="#bb9af7">████                     ████                     ████</tspan>
-        <tspan x="550" y="110" fill="#bb9af7">████                     ████                     ████</tspan>
-        <tspan x="550" y="130" fill="#bb9af7">████    █████████████████████         ████████    ████</tspan>
-        <tspan x="550" y="150" fill="#bb9af7">████    █████████████████████         ████████    ████</tspan>
-        <tspan x="550" y="170" fill="#bb9af7">████    ████                              ████    ████</tspan>
-        <tspan x="550" y="190" fill="#bb9af7">████    ████                              ████    ████</tspan>
-        <tspan x="550" y="210" fill="#bb9af7">████    ████                              ████    ████</tspan>
-        <tspan x="550" y="230" fill="#bb9af7">████    ████                              ████    ████</tspan>
-        <tspan x="550" y="250" fill="#bb9af7">████    ████                              ████    ████</tspan>
-        <tspan x="550" y="270" fill="#bb9af7">████    ████                              ████    ████</tspan>
-        <tspan x="550" y="290" fill="#bb9af7">████████████                              ████    ████</tspan>
-        <tspan x="550" y="310" fill="#bb9af7">████████████                              ████    ████</tspan>
-        <tspan x="550" y="330" fill="#bb9af7">████    ████                              ████    ████</tspan>
-        <tspan x="550" y="350" fill="#bb9af7">████    ████                              ████    ████</tspan>
-        <tspan x="550" y="370" fill="#bb9af7">████    ████                              ████    ████</tspan>
-        <tspan x="550" y="390" fill="#bb9af7">████    ████                              ████    ████</tspan>
-        <tspan x="550" y="410" fill="#bb9af7">████    ████                              ████    ████</tspan>
-        <tspan x="550" y="430" fill="#bb9af7">████    ████                              ████    ████</tspan>
-        <tspan x="550" y="450" fill="#bb9af7">████    ██████████████████████████████████████    ████</tspan>
-        <tspan x="550" y="470" fill="#bb9af7">████    ██████████████████████████████████████    ████</tspan>
-        <tspan x="550" y="490" fill="#bb9af7">████                     ████                     ████</tspan>
-        <tspan x="550" y="510" fill="#bb9af7">████                     ████                     ████</tspan>
-        <tspan x="550" y="530" fill="#bb9af7">█████████████████████████████     ████████████████████</tspan>
-        <tspan x="550" y="550" fill="#bb9af7">█████████████████████████████     ████████████████████</tspan>
+        <tspan x="550" y="50" fill="#a3bb7e">██████████████████████████████████████████████████████</tspan>
+        <tspan x="550" y="70" fill="#a3bb7e">██████████████████████████████████████████████████████</tspan>
+        <tspan x="550" y="90" fill="#a3bb7e">████                     ████                     ████</tspan>
+        <tspan x="550" y="110" fill="#a3bb7e">████                     ████                     ████</tspan>
+        <tspan x="550" y="130" fill="#a3bb7e">████    █████████████████████         ████████    ████</tspan>
+        <tspan x="550" y="150" fill="#a3bb7e">████    █████████████████████         ████████    ████</tspan>
+        <tspan x="550" y="170" fill="#a3bb7e">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="190" fill="#a3bb7e">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="210" fill="#a3bb7e">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="230" fill="#a3bb7e">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="250" fill="#a3bb7e">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="270" fill="#a3bb7e">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="290" fill="#a3bb7e">████████████                              ████    ████</tspan>
+        <tspan x="550" y="310" fill="#a3bb7e">████████████                              ████    ████</tspan>
+        <tspan x="550" y="330" fill="#a3bb7e">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="350" fill="#a3bb7e">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="370" fill="#a3bb7e">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="390" fill="#a3bb7e">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="410" fill="#a3bb7e">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="430" fill="#a3bb7e">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="450" fill="#a3bb7e">████    ██████████████████████████████████████    ████</tspan>
+        <tspan x="550" y="470" fill="#a3bb7e">████    ██████████████████████████████████████    ████</tspan>
+        <tspan x="550" y="490" fill="#a3bb7e">████                     ████                     ████</tspan>
+        <tspan x="550" y="510" fill="#a3bb7e">████                     ████                     ████</tspan>
+        <tspan x="550" y="530" fill="#a3bb7e">█████████████████████████████     ████████████████████</tspan>
+        <tspan x="550" y="550" fill="#a3bb7e">█████████████████████████████     ████████████████████</tspan>
     </text>
 </svg>
