@@ -1,11 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="530" viewBox="0 0 900 530">
-    <rect width="900" height="530" rx="10" ry="10" fill="#1e1e1e" />
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590">
+    <rect width="1100" height="590" rx="10" ry="10" fill="#1e1e1e" />
     <circle cx="20" cy="20" r="6" fill="#ff5f56" />
     <circle cx="40" cy="20" r="6" fill="#ffbd2e" />
     <circle cx="60" cy="20" r="6" fill="#27c93f" />
-    
-    <!-- Imagen a la derecha -->
-    <image href="data:image/png;base64,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" x="550" y="50" width="300" height="300" />
     
     <text font-family="monospace" font-size="14" fill="#a9b1d6" xml:space="preserve">
         <tspan x="20" y="50">Pabl0125@github -------------------------------------------</tspan>
@@ -31,5 +28,31 @@
         <tspan x="20" y="450">- GitHub Stats ----------------------------------------------</tspan>
         <tspan x="20" y="470">. Repos: .... 7  | Stars: ............................. 0   </tspan>
         <tspan x="20" y="490">. Followers: ........................................ 11  </tspan>
+        <tspan x="550" y="50" fill="#bb9af7">██████████████████████████████████████████████████████</tspan>
+        <tspan x="550" y="70" fill="#bb9af7">██████████████████████████████████████████████████████</tspan>
+        <tspan x="550" y="90" fill="#bb9af7">████                     ████                     ████</tspan>
+        <tspan x="550" y="110" fill="#bb9af7">████                     ████                     ████</tspan>
+        <tspan x="550" y="130" fill="#bb9af7">████    █████████████████████         ████████    ████</tspan>
+        <tspan x="550" y="150" fill="#bb9af7">████    █████████████████████         ████████    ████</tspan>
+        <tspan x="550" y="170" fill="#bb9af7">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="190" fill="#bb9af7">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="210" fill="#bb9af7">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="230" fill="#bb9af7">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="250" fill="#bb9af7">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="270" fill="#bb9af7">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="290" fill="#bb9af7">████████████                              ████    ████</tspan>
+        <tspan x="550" y="310" fill="#bb9af7">████████████                              ████    ████</tspan>
+        <tspan x="550" y="330" fill="#bb9af7">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="350" fill="#bb9af7">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="370" fill="#bb9af7">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="390" fill="#bb9af7">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="410" fill="#bb9af7">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="430" fill="#bb9af7">████    ████                              ████    ████</tspan>
+        <tspan x="550" y="450" fill="#bb9af7">████    ██████████████████████████████████████    ████</tspan>
+        <tspan x="550" y="470" fill="#bb9af7">████    ██████████████████████████████████████    ████</tspan>
+        <tspan x="550" y="490" fill="#bb9af7">████                     ████                     ████</tspan>
+        <tspan x="550" y="510" fill="#bb9af7">████                     ████                     ████</tspan>
+        <tspan x="550" y="530" fill="#bb9af7">█████████████████████████████     ████████████████████</tspan>
+        <tspan x="550" y="550" fill="#bb9af7">█████████████████████████████     ████████████████████</tspan>
     </text>
 </svg>
