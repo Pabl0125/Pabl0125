@@ -1,6 +1,7 @@
 import os
 import requests
 import re
+import base64
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from io import BytesIO
@@ -107,6 +108,10 @@ def generate_svg():
     padding = 20
     header_offset = 30
     
+    # Leer la imagen y codificar en base64 para embeberla
+    with open("penguin_ascii.png", "rb") as img_file:
+        img_base64 = base64.b64encode(img_file.read()).decode('utf-8')
+    
     # Calcular altura basada en las líneas de texto, con mínimo para la imagen
     height = max(len(lines) * line_height + padding * 2 + header_offset, 350)
     width = 900
@@ -118,7 +123,7 @@ def generate_svg():
     <circle cx="60" cy="20" r="6" fill="#27c93f" />
     
     <!-- Imagen a la derecha -->
-    <image href="penguin_ascii.png" x="550" y="50" width="300" height="300" />
+    <image href="data:image/png;base64,{img_base64}" x="550" y="50" width="300" height="300" />
     
     <text font-family="monospace" font-size="14" fill="#a9b1d6" xml:space="preserve">
 '''
