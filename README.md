@@ -1,7 +1,4 @@
-
-
 <br/>
-
 <div align="center">
   <img src="terminal.svg" alt="Terminal" />
 </div>
@@ -16,11 +13,3 @@
 ![](https://github-readme-stats.shion.dev/api?username=Pabl0125&theme=nord&hide_border=false&include_all_commits=true&count_private=true)<br/>
 ![](https://streak-stats.demolab.com/?user=Pabl0125&theme=nord&hide_border=false)<br/>
 ![](https://github-readme-stats.shion.dev/api/top-langs/?username=Pabl0125&theme=nord&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
-
----
-
-<div align="center">
-  <br/>
-  <br/>
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Pabl0125&theme=nord" alt="Actividad de GitHub" />
-</div>
