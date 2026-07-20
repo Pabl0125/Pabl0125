@@ -108,9 +108,9 @@ def generate_svg():
     padding = 20
     header_offset = 30
     
-    # Leer la imagen y codificar en base64 para embeberla
-    with open("penguin_ascii.png", "rb") as img_file:
-        img_base64 = base64.b64encode(img_file.read()).decode('utf-8')
+    # Descargar el logo de omarchy y codificar en base64 para embeberlo
+    response = requests.get("https://github.com/omarchy.png")
+    img_base64 = base64.b64encode(response.content).decode('utf-8')
     
     # Calcular altura basada en las líneas de texto, con mínimo para la imagen
     height = max(len(lines) * line_height + padding * 2 + header_offset, 350)
