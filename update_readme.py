@@ -1,11 +1,8 @@
 import os
-import requests
 import re
-import base64
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
-from io import BytesIO
-from PIL import Image
+import requests
 
 # ==========================================
 # ⚙️ CONFIGURACIÓN PERSONAL
@@ -31,6 +28,35 @@ INFO = {
     "Discord": "tu_usuario_discord"
 }
 # ==========================================
+
+def get_ascii_logo():
+    logo = '''██████████████████████████████████████████████████████
+██████████████████████████████████████████████████████
+████                     ████                     ████
+████                     ████                     ████
+████    █████████████████████         ████████    ████
+████    █████████████████████         ████████    ████
+████    ████                              ████    ████
+████    ████                              ████    ████
+████    ████                              ████    ████
+████    ████                              ████    ████
+████    ████                              ████    ████
+████    ████                              ████    ████
+████████████                              ████    ████
+████████████                              ████    ████
+████    ████                              ████    ████
+████    ████                              ████    ████
+████    ████                              ████    ████
+████    ████                              ████    ████
+████    ████                              ████    ████
+████    ████                              ████    ████
+████    ██████████████████████████████████████    ████
+████    ██████████████████████████████████████    ████
+████                     ████                     ████
+████                     ████                     ████
+█████████████████████████████     ████████████████████
+█████████████████████████████     ████████████████████'''
+    return logo.split('\n')
 
 def get_uptime(birthday):
     """Calcula el tiempo transcurrido desde la fecha de nacimiento."""
@@ -107,23 +133,17 @@ def generate_svg():
     line_height = 20
     padding = 20
     header_offset = 30
+    ascii_lines = get_ascii_logo()
     
-    # Descargar el logo de omarchy y codificar en base64 para embeberlo
-    response = requests.get("https://github.com/omarchy.png")
-    img_base64 = base64.b64encode(response.content).decode('utf-8')
-    
-    # Calcular altura basada en las líneas de texto, con mínimo para la imagen
-    height = max(len(lines) * line_height + padding * 2 + header_offset, 350)
-    width = 900
+    # Calcular altura basada en las líneas de texto o logo
+    height = max(len(lines), len(ascii_lines)) * line_height + padding * 2 + header_offset
+    width = 1100
     
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
     <rect width="{width}" height="{height}" rx="10" ry="10" fill="#1e1e1e" />
     <circle cx="20" cy="20" r="6" fill="#ff5f56" />
     <circle cx="40" cy="20" r="6" fill="#ffbd2e" />
     <circle cx="60" cy="20" r="6" fill="#27c93f" />
-    
-    <!-- Imagen a la derecha -->
-    <image href="data:image/png;base64,{img_base64}" x="550" y="50" width="300" height="300" />
     
     <text font-family="monospace" font-size="14" fill="#a9b1d6" xml:space="preserve">
 '''
@@ -132,6 +152,11 @@ def generate_svg():
         y = padding + header_offset + (i * line_height)
         line = line.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
         svg += f'        <tspan x="20" y="{y}">{line}</tspan>\n'
+
+    # Dibujar logo ASCII (derecha)
+    for i, line in enumerate(ascii_lines):
+        y = padding + header_offset + (i * line_height)
+        svg += f'        <tspan x="550" y="{y}" fill="#bb9af7">{line}</tspan>\n'
         
     svg += '''    </text>
 </svg>'''
