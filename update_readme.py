@@ -13,19 +13,19 @@ BIRTHDAY = datetime(1998, 5, 15) # Formato: Año, Mes, Día
 
 # Datos estáticos de tu perfil
 INFO = {
-    "OS": "Windows 11, Android, Linux",
-    "Host": "Tu Empresa / Freelance",
-    "Role": "Desarrollador Full-Stack",
-    "IDE": "VS Code, Neovim",
-    "Languages.Programming": "Python, JavaScript, Java, C++",
+    "OS": "Linux: Omarchy 3.8.3",
+    "Host": "Student",
+    "Role": "Estudiante y Desarrollador de Software",
+    "IDE": "VS Code, IntelIJ, NeoVim",
+    "Languages.Programming": "Java, C, TypeScript",
     "Languages.Computer": "HTML, CSS, JSON, SQL",
-    "Languages.Real": "Español, Inglés",
-    "Hobbies.Software": "Open Source, Linux Ricing",
-    "Hobbies.Hardware": "Teclados Custom, PC Build",
-    "Email.Personal": "tu_correo@gmail.com",
-    "Email.Work": "tu_correo@trabajo.com",
-    "LinkedIn": "linkedin.com/in/tu_usuario",
-    "Discord": "tu_usuario_discord"
+    "Languages.Real": "Español, Inglés (C1)",
+    "Hobbies.CS": "Web Dev, Homelabing, AI Tech",
+    "Hobbies.Other": "Cinema, Music, Sports",
+    "Email.Personal": "pabloarro2005@gmail.com",
+    "Email.University": "pablo.araujo0@rai.usc.es",
+    "LinkedIn": "https://www.linkedin.com/in/pablo-araujo-252163423/",
+    "Discord": "Pabl0125"
 }
 # ==========================================
 
