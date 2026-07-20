@@ -145,7 +145,7 @@ def generate_svg():
     <circle cx="40" cy="20" r="6" fill="#ffbd2e" />
     <circle cx="60" cy="20" r="6" fill="#27c93f" />
     
-    <text font-family="monospace" font-size="14" fill="#a9b1d6" xml:space="preserve">
+    <text font-family="monospace" font-size="14" fill="#ffffff" xml:space="preserve">
 '''
     # Dibujar la parte del texto (izquierda)
     for i, line in enumerate(lines):
@@ -156,7 +156,7 @@ def generate_svg():
     # Dibujar logo ASCII (derecha)
     for i, line in enumerate(ascii_lines):
         y = padding + header_offset + (i * line_height)
-        svg += f'        <tspan x="550" y="{y}" fill="#bb9af7">{line}</tspan>\n'
+        svg += f'        <tspan x="550" y="{y}" fill="#a3bb7e">{line}</tspan>\n'
         
     svg += '''    </text>
 </svg>'''
