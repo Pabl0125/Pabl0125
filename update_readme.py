@@ -1,5 +1,4 @@
 import os
-import re
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 import requests
@@ -13,7 +12,7 @@ BIRTHDAY = datetime(1998, 5, 15) # Formato: Año, Mes, Día
 
 # Datos estáticos de tu perfil
 INFO = {
-    "OS": "Linux: Omarchy 3.8.3",
+    "OS": "Linux, Omarchy 3.8.3",
     "Host": "Student",
     "Role": "Estudiante y Desarrollador de Software",
     "IDE": "VS Code, IntelIJ, NeoVim",
@@ -32,8 +31,8 @@ INFO = {
 def get_ascii_logo():
     logo = '''██████████████████████████████████████████████████████
 ██████████████████████████████████████████████████████
-████                     ████                     ████
-████                     ████                     ████
+████                      ████                      ████
+████                      ████                      ████
 ████    █████████████████████         ████████    ████
 ████    █████████████████████         ████████    ████
 ████    ████                              ████    ████
@@ -52,8 +51,8 @@ def get_ascii_logo():
 ████    ████                              ████    ████
 ████    ██████████████████████████████████████    ████
 ████    ██████████████████████████████████████    ████
-████                     ████                     ████
-████                     ████                     ████
+████                      ████                      ████
+████                      ████                      ████
 █████████████████████████████     ████████████████████
 █████████████████████████████     ████████████████████'''
     return logo.split('\n')
@@ -65,6 +64,10 @@ def get_uptime(birthday):
 
 def get_github_stats():
     """Obtiene estadísticas de GitHub usando la API GraphQL."""
+    if not GITHUB_TOKEN:
+        print("⚠️ Advertencia: No se encontró GITHUB_TOKEN. Se pondrán las estadísticas a 0.")
+        return 0, 0, 0
+
     headers = {"Authorization": f"Bearer {GITHUB_TOKEN}"}
     query = """
     query($login: String!) {
@@ -82,7 +85,8 @@ def get_github_stats():
     response = requests.post('https://api.github.com/graphql', json={'query': query, 'variables': {'login': USER_NAME}}, headers=headers)
     
     if response.status_code != 200:
-        raise Exception(f"Fallo en la API de GitHub: {response.text}")
+        print(f"⚠️ Fallo en la API de GitHub: {response.text}")
+        return 0, 0, 0
         
     data = response.json()['data']['user']
     followers = data['followers']['totalCount']
@@ -116,12 +120,12 @@ def generate_svg():
         format_line("Languages.Computer", INFO["Languages.Computer"]),
         format_line("Languages.Real", INFO["Languages.Real"]),
         ".",
-        format_line("Hobbies.Software", INFO["Hobbies.Software"]),
-        format_line("Hobbies.Hardware", INFO["Hobbies.Hardware"]),
+        format_line("Hobbies.CS", INFO["Hobbies.CS"]),
+        format_line("Hobbies.Other", INFO["Hobbies.Other"]),
         ".",
         "- Contact ---------------------------------------------------",
         format_line("Email.Personal", INFO["Email.Personal"]),
-        format_line("Email.Work", INFO["Email.Work"]),
+        format_line("Email.University", INFO["Email.University"]),
         format_line("LinkedIn", INFO["LinkedIn"]),
         format_line("Discord", INFO["Discord"]),
         ".",
