@@ -6,9 +6,9 @@ import requests
 # ==========================================
 # ⚙️ CONFIGURACIÓN PERSONAL
 # ==========================================
-USER_NAME = os.environ.get('GITHUB_USER', 'tu_usuario')
+USER_NAME = os.environ.get('GITHUB_USER', 'Pabl0125')
 GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
-BIRTHDAY = datetime(1998, 5, 15) # Formato: Año, Mes, Día
+BIRTHDAY = datetime(2005, 7, 29) # Formato: Año, Mes, Día
 
 # Datos estáticos de tu perfil
 INFO = {
